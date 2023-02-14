@@ -8,7 +8,7 @@ from copy import deepcopy
 from functools import partial
 import time
 import threading
-from typing import Callable
+from typing import Callable, Dict
 
 
 
@@ -17,7 +17,7 @@ _infinity = float('inf')
 
 class Cache:
 
-    _functions_dict: dict[Callable, dict] = {}
+    _functions_dict: Dict[Callable, dict] = {}
     _thread_object_ = None
     _is_shutdown = False
     _sleep_time = 0
